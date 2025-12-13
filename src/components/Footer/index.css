@@ -1,0 +1,30 @@
+.footer-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f6efef;
+    width: 100vw;
+}
+.footer-card{
+    width: 200px;
+    margin: 10px;
+}
+.social-media{
+    margin: 10px;
+    background-color: #ffff;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+@media (max-width: 576px) {
+    .footer-div{
+        flex-direction: column;
+    }.footer-card{
+        text-align: left;
+        width: 80%;
+        justify-content: start;
+        align-items: start;
+    }
+}

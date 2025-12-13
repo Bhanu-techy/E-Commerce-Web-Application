@@ -1,0 +1,24 @@
+.header-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    padding: 10px;
+}
+.nav-items{
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+}
+
+@media (max-width: 576px) {
+    .nav-items{
+        width: 180px;
+    }
+}
