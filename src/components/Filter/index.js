@@ -2,7 +2,7 @@ import React from 'react'
 import { IoFilterSharp } from "react-icons/io5";
 import "./index.css"
 
-function Filter({setCategory, onClickLoadMore}) {
+function Filter({setCategory, onClickLoadMore, setFilter}) {
   return (
     <div className='filters-div'>
         <h2><span><IoFilterSharp/> </span>Filters</h2>
@@ -11,15 +11,15 @@ function Filter({setCategory, onClickLoadMore}) {
             <lable htmlFor="all">All Products</lable>
         </div>
         <div className='radio-div'>
-            <input type='radio' id="bags" onClick={()=>setCategory('bags')}/>
+            <input type='radio' id="bags" onClick={()=>setFilter('bags')}/>
             <lable htmlFor="bags">Bags</lable>
         </div>
         <div className='radio-div'>
-            <input type='radio' id="accessories" onClick={()=>setCategory('accessories')}/>
+            <input type='radio' id="accessories" onClick={()=>setFilter('accessories')}/>
             <lable htmlFor="accessories">Accesories</lable>
         </div>
         <div className='radio-div'>
-            <input type="radio" id="footwear" onClick={()=>setCategory('footwear')}/>
+            <input type="radio" id="footwear" onClick={()=>setFilter('footwear')}/>
             <label htmlFor='footwear'>Footwear</label>
         </div>
         <h2>Price Range</h2>
