@@ -2,12 +2,12 @@ import React from 'react'
 import { IoFilterSharp } from "react-icons/io5";
 import "./index.css"
 
-function Filter({setCategory}) {
+function Filter({setCategory, onClickLoadMore}) {
   return (
     <div className='filters-div'>
         <h2><span><IoFilterSharp/> </span>Filters</h2>
         <div className='radio-div'>
-            <input type='radio' id="all" />
+            <input type='radio' id="all" onClick={onClickLoadMore}/>
             <lable htmlFor="all">All Products</lable>
         </div>
         <div className='radio-div'>

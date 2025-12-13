@@ -6,7 +6,7 @@ import "./index.css"
 function Header() {
   return (
     <div className='header-div'>
-        <p>Lumina Store</p>
+        <h3>Lumina Store</h3>
         <nav className='nav-items'>
             <p>Shop</p>
             <p>Account</p>
