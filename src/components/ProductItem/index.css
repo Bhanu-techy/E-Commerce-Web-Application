@@ -1,0 +1,31 @@
+.product-item-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    height: 80vh;
+    width: 100vw;
+}
+.product-img{
+    width: 300px;
+    height: 300px;
+}
+.product-details-div{
+    width: 60vw;
+    padding: 10px;
+}
+.product-img-div{
+    padding: 10px;
+    text-align: center;
+    width: 350px;
+}
+.counter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+}
+.description{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}

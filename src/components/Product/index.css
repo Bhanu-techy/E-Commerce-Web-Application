@@ -9,6 +9,7 @@
 }
 .title{
     font-size: 14px;
+    text-align: left;
 }
 .product-div{
     width: 230px;
@@ -30,8 +31,14 @@
 }
 .dflex{
     display: flex;
-    justify-content: center;
-    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.view-more{
+    border: none;
+    color: blue;
+    background: transparent;
+    text-decoration: underline;
 }
 
 @media (max-width: 576px) {

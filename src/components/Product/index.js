@@ -1,11 +1,11 @@
-import React from 'react'
+import { Link} from "react-router-dom";
 import { FaRegStar } from "react-icons/fa";
 import "./index.css"
 
 function Product({details}) {
-    const {title, price, description, rating, image}=details
+    const {title, price, description, rating, image, id}=details
     const name=title.split(" ").slice(0,3).join(" ")
-    const info=description.slice(0,30)
+    const info=description.slice(0,31)
     
   return (
     <div className='product-div'>
@@ -15,7 +15,12 @@ function Product({details}) {
             <p><FaRegStar/> {rating.rate}</p>
         </div>
         <p className='title'>{info}...</p>
-        <p className='price'>$ {price}</p>
+       <div className="dflex">
+         <p className='price'>$ {price}</p>
+        <Link to={`/product/${id}`}>
+        <button className="view-more">View More</button>
+        </Link>
+       </div>
     </div>
   )
 }
