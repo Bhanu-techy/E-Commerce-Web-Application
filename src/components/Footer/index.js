@@ -1,3 +1,5 @@
+import { PiInstagramLogoFill } from "react-icons/pi";
+import { TbBrandLinkedinFilled } from "react-icons/tb";
 import "./index.css"
 
 function Footer() {
@@ -23,9 +25,12 @@ function Footer() {
         <div>
             <h2>Connect</h2>
             <div className="dflex">
-            <p className="social-media">FB</p>
-            <p className="social-media">IG</p>
-            <p className="social-media">TW</p>
+            <div className="insta-div">
+                <PiInstagramLogoFill size={18}/>
+            </div>
+            <div className="insta-div">
+                <TbBrandLinkedinFilled size={18}/>
+            </div>
             </div>
         </div>
     </div>

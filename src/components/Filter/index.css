@@ -1,5 +1,5 @@
 .filters-div{
-    width: 20vw;
+    width: 30vw;
 }
 .radio-div{
     padding: 10px;
@@ -9,9 +9,37 @@
     box-shadow: 2px 2px 2px 2px #f4efef;
 }
 select{
-    width: 200px;
-    border-radius: 10px;
-    height: 30px;
+    padding-right: 10px;
+    width: 220px;
+    border-radius: 20px;
+    height: 40px;
+    padding: 5px;
+}
+select option:hover{
+    background-color: blue;
+    color: #ffff;
+}
+.search-bar{
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #bfbfbf;
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.input{
+    border: none;
+    color: #000000;
+}
+.input:focus {
+  outline: none;
+}
+.search-btn{
+    background-color: transparent;
+    border: none;
 }
 
 @media (max-width :576px) {

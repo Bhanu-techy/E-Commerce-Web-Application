@@ -5,7 +5,7 @@ import "./index.css"
 function ProductItem() {
 
     const [details, setDetails] = useState({})
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
     const {id} = useParams()
 
     useEffect(()=>{
@@ -50,6 +50,7 @@ function ProductItem() {
                 <h2>{count}</h2>
                 <button onClick={onClickPlus}>+</button>
             </div>
+            <button>Add TO Cart</button>
         </div>
     </div>
   )

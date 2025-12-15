@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom'
-import { CiSearch } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import "./index.css"
 
@@ -16,8 +15,9 @@ function Header() {
             <p>Contact US</p>
         </nav>
         <div className='icons'>
-            <CiSearch size={20}/>
+          <Link to="/cart">
             <FiShoppingCart size={20}/>
+          </Link>
         </div>
     </div>
     <hr className='hr'/>
