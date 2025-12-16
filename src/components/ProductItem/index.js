@@ -1,12 +1,15 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import { useParams } from 'react-router-dom'
+import CartContext from '../Context/CartContext'
 import "./index.css"
 
 function ProductItem() {
 
     const [details, setDetails] = useState({})
-    const [count, setCount] = useState(1)
+    const [quantity, setQuantity] = useState(1)
     const {id} = useParams()
+
+    const {addToCart} = useContext(CartContext)
 
     useEffect(()=>{
         const getDetails = async () => {
@@ -22,13 +25,17 @@ function ProductItem() {
     },[id])
 
     const onClickPlus = async () => {
-        setCount(prev => prev+1)
+        setQuantity(prev => prev+1)
     }
 
     const onClickMinus = async () => {
-        if (count>0){
-            setCount(prev => prev-1)
+        if (quantity>0){
+            setQuantity(prev => prev-1)
         }
+    }
+
+    const onClickAddToCart = () => {
+        addToCart({...details, quantity})
     }
 
     const {image, title, description, rating={}, price, category}= details
@@ -47,10 +54,10 @@ function ProductItem() {
             <p>Rating Count : {rating.count}</p>
             <div className='counter'>
                 <button onClick={onClickMinus}>-</button>
-                <h2>{count}</h2>
+                <h2>{quantity}</h2>
                 <button onClick={onClickPlus}>+</button>
             </div>
-            <button>Add TO Cart</button>
+            <button onClick={onClickAddToCart}>Add TO Cart</button>
         </div>
     </div>
   )
