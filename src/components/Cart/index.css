@@ -5,10 +5,14 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    padding: 10px;
 }
 .cart-head{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+li{
+    list-style: none;
 }

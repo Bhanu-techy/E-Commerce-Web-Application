@@ -1,30 +1,33 @@
 import {useContext} from 'react'
 import CartContext from '../Context/CartContext'
 import EmptyCartView from '../EmptyCartView'
+import CartItem from '../CartItem'
 import './index.css'
 
 function Cart() {
 
-  const {cartItems, removeFromCart, clearCart} = useContext(CartContext)
-  console.log(cartItems)
+  const {cartItems, clearCart} = useContext(CartContext)
 
   return (
       <div className="cart-container">
-        <div className='cart-head'>
-          <h1 className="cart-heading">My Cart</h1>
-        <button
-          type="button"
-          className="removeAll"
-          data-testid="remove"
-          onClick={removeFromCart}
-        >Remove</button>
-        </div>
+        
         <div>
           {cartItems.length ===0 ?
           <EmptyCartView/> :
+          <div>
+            <div className='cart-head'>
+          <h1 className="cart-heading">My Cart</h1>
+        <button
+          type="button"
+          className="remove-btn"
+          data-testid="remove"
+          onClick={clearCart}
+        >Remove All</button>
+        </div>
           <ul>{cartItems.map(each=>(
-          <li>{each.category}</li>
-        ))}</ul>
+              <CartItem key={each.id} Item={each}/>))}
+          </ul>
+          </div>
           }
         </div>
      </div>

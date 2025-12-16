@@ -21,8 +21,7 @@ function Filter({setCategory, search, setSearch, onClickSearch}) {
                 <option value="electonics">Electonics</option>
             </select>
         </div>
-        <h2>Price Range</h2>
-        <input type="range" min="$10" max="$100" step="1"></input>
+        
     </div>
   )
 }
