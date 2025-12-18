@@ -1,12 +1,23 @@
 ## Title
 
-***Products List UI***
+***Ecomerce Web App***
 
 
-1. Objective
+## Overview
 
-The main goal of this project is to build a user friendly, responsive UI with given UI Preferences
+This project is a React-based E-Commerce frontend application designed to simulate a real-world online shopping experience. Users can browse products, view detailed product information, choose quantities, and add items to a shopping cart. The application emphasizes clean UI, smooth navigation, and efficient state management.
 
+The project was developed as part of hands-on learning to strengthen React fundamentals and frontend architecture concepts.
+
+## Objectives
+
+Build a functional E-Commerce user interface using React
+
+Implement seamless navigation between product listing and product detail pages
+
+Manage cart state efficiently across components
+
+Apply React best practices and reusable component design
 
 ## Compete Instuctions
 
@@ -34,13 +45,79 @@ The main goal of this project is to build a user friendly, responsive UI with gi
 
 -Minimized DOM Size: Keep the DOM size as minimal as possible for performance optimization.
 
-## Tech Stack
 
-- **Programming Language and Framework**: JavaScript with React (version 18 or later recommended for hooks and context).
-- **Libraries**: React-icons
+## Key Features
 
-## Completion Instructions
+Product listing with reusable product cards
 
-- **Goal:** Return all products.
-- **Filters** When user select option from dropdown products will be filtered
-- **LoadMore** Initially UI displays some Products, but we click on Load more button all data will be fetch and displayed and button will dissaapear.
+Search and filter functionality for products
+
+Detailed product view page
+
+Quantity selection for products
+
+Add to cart functionality
+
+Dynamic cart updates using global state
+
+Smooth navigation using React Router
+
+Responsive UI for better user experience
+
+## Application Workflow
+
+User lands on the Home / Products page displaying a list of products
+
+User can search or filter products
+
+Clicking the “View More” button navigates to the Product Details page
+
+On the Product Details page:
+
+Full product information is displayed
+
+User selects the desired product quantity
+
+User adds the product to the cart
+
+Cart state is updated globally and reflected across the application
+
+
+## Technologies & Tools
+
+React JS
+
+JavaScript (ES6+)
+
+HTML5
+
+CSS3
+
+React Hooks (useState, useEffect, useContext)
+
+React Context API – for global cart state management
+
+React Router DOM – for client-side routing
+
+## Project Structure
+
+```
+src/
+├── components/
+│ ├── Header
+│ ├── Product
+│ ├── ProductItem
+│ ├── Cart
+│ ├── Filter
+| ├── EmptyCartView
+| ├── CartItem
+| ├── Home
+| ├── Footer
+│ └── NotFound
+├── context/
+│ └── CartContext.jsx
+|
+├── App.js
+└── index.js
+
+```
