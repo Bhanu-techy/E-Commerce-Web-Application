@@ -77,11 +77,17 @@ The project was developed as part of hands-on learning to strengthen React funda
 ## Technologies & Tools
 
 -React JS
+
 -JavaScript (ES6+)
+
 -HTML5
+
 -CSS3
+
 -React Hooks (useState, useEffect, useContext)
+
 -React Context API – for global cart state management
+
 -React Router DOM – for client-side routing
 
 ## Project Structure
