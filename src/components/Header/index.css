@@ -7,18 +7,30 @@
 }
 .nav-items{
     display: flex;
-    justify-content: space-between;
-    width: 220px;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
 }
-
-.icons{
+.cart-icon{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     width: 100px;
+    text-decoration: none;
+}
+.cart-count{
+    color: #ffffff;
+    background-color: red;
+    height: 15px;
+    width: 12px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 50%;
 }
 
 @media (max-width: 576px) {
     .nav-items{
-        width: 180px;
+        width: 200px;
+        
     }
 }

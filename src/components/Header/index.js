@@ -1,8 +1,14 @@
+import { useContext } from 'react';
 import {Link} from 'react-router-dom'
 import { FiShoppingCart } from "react-icons/fi";
+import CartContext from '../Context/CartContext';
 import "./index.css"
 
 function Header() {
+
+  const {cartItems} = useContext(CartContext)
+  const cartLength = cartItems.length
+
   return (
     <>
     <div className='header-div'>
@@ -11,14 +17,11 @@ function Header() {
             <Link to="/">
             <p>Shop</p>
             </Link>
-            <p>Account</p>
-            <p>Contact US</p>
         </nav>
-        <div className='icons'>
-          <Link to="/cart">
+          <Link to="/cart" className='cart-icon'>
             <FiShoppingCart size={20}/>
+            {cartLength >0 && <p className='cart-count'>{cartLength}</p>}
           </Link>
-        </div>
     </div>
     <hr className='hr'/>
     </>

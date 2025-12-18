@@ -40,3 +40,9 @@
     font-size: 26px;
   }
 }
+
+@media (max-width : 576px) {
+  .notFound-container{
+    height: 70vh;
+  }
+}

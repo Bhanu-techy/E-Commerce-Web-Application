@@ -29,7 +29,7 @@ function ProductItem() {
     }
 
     const onClickMinus = async () => {
-        if (quantity>0){
+        if (quantity>1){
             setQuantity(prev => prev-1)
         }
     }
@@ -57,7 +57,7 @@ function ProductItem() {
                 <h2>{quantity}</h2>
                 <button onClick={onClickPlus}>+</button>
             </div>
-            <button onClick={onClickAddToCart}>Add TO Cart</button>
+            <button onClick={onClickAddToCart} className='add-to-cart'>Add To Cart</button>
         </div>
     </div>
   )

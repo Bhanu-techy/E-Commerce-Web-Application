@@ -2,8 +2,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
-    height: 80vh;
     width: 100vw;
 }
 .product-img{
@@ -28,4 +26,21 @@
 .description{
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
+}
+.add-to-cart{
+    background-color: rgb(95, 95, 240);
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    margin-left: 10px;
+}
+
+@media (max-width: 576px) {
+    .product-item-div{
+        display: flex;
+        flex-direction: column;
+    }.product-details-div{
+        width: 90%;
+    }
 }

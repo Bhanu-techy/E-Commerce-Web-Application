@@ -15,7 +15,7 @@ function Product({details}) {
             <p><FaRegStar/> {rating.rate}</p>
         </div>
         <p className='title'>{info}...</p>
-       <div className="dflex">
+       <div className="dflex price-view-more">
          <p className='price'>$ {price}</p>
         <Link to={`/product/${id}`}>
         <button className="view-more">View More</button>

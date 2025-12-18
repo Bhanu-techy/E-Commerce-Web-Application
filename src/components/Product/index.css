@@ -3,9 +3,11 @@
     height: 210px;
 }
 .products-list{
-    width: 100%;
     display: flex;
+    justify-content: start;
+    align-items: start;
     flex-wrap: wrap;
+    width: 100%;
 }
 .title{
     font-size: 14px;
@@ -17,6 +19,10 @@
     margin: 10px;
     box-shadow: 4px 4px 6px 6px #fbf5f5;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .title-div{
     display: flex;
@@ -40,9 +46,16 @@
     background: transparent;
     text-decoration: underline;
 }
+.price-view-more{
+    width: 100%;
+}
 
 @media (max-width: 576px) {
     .product-div{
-        width: 70%;
+        width: 200px;
+        margin: 5px;
+    }.image{
+        width: 160px;
+        height: 180px;
     }
 }

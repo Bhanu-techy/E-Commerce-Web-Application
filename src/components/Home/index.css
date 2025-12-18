@@ -36,8 +36,11 @@
     margin: 10px;
 }
 .text{
-    
     text-align: center;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
 }
 
 @media (max-width : 576px) {
@@ -47,9 +50,9 @@
         align-items: center;
         flex-direction: column;
     }.home-div{
-        width: 100vw;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        padding: 10px;
+        
     }
 }
