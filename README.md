@@ -1,6 +1,6 @@
 ## Title
 
-***Ecomerce Web App***
+***Ecomerce Web Application***
 
 
 ## Overview
