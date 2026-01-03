@@ -22,10 +22,14 @@
 
 @media (max-width : 576px) {
     .cart-img{
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }.remove-btn{
         width: 50px;
         font-size: 10px;
+    }p{
+        font-size: 13px;
+    }.remove-btn{
+        width: 50px;
     }
 }

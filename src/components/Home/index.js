@@ -1,9 +1,18 @@
 import {useState, useEffect} from 'react'
+import { Oval } from "react-loader-spinner";
 import Product from '../Product'
 import Filter from '../Filter'
 import "./index.css"
 
+const stateConstants = {
+  success: 'SUCCESS',
+  failure: 'FAILURE',
+  in_progress: 'LOADING',
+}
+
 function Home() {
+    
+    const [state, setState] = useState(stateConstants.in_progress)
     const [data, setData] = useState([])
     const [loadMore, setLoadMore] = useState(false)
     const [category, setCategory] = useState("")
@@ -16,6 +25,9 @@ function Home() {
             const someData=details.slice(3,13)
             if (response.ok){
                 setData(someData)
+                setState(stateConstants.success)
+            }else{
+                setState(stateConstants.failure)
             }
         }
         getDetails()
@@ -37,9 +49,36 @@ function Home() {
         setData(searchResult)
     }
 
-  return (
-    <div className='home-div'>
-       
+    const renderLoadingView = () => (
+    <div className="profile-loader" data-testid="loader">
+      <Oval
+            visible={true}
+            height="80"
+            width="80"
+            color="#5e84c9ff"
+            ariaLabel="oval-loading"
+            secondaryColor="#92aaedff"
+            strokeWidth={2}
+            strokeWidthSecondary={2}
+          />
+    </div>
+  )
+
+  const renderFailureView = () => (
+    <div className="failure-view">
+      <img
+        src="https://res.cloudinary.com/dsqphsoxb/image/upload/v1751650133/failureView_po4xd8.png"
+        alt="failure view"
+        className="failure-view-img"
+      />
+      <p>Something went wrong. Please try again</p>
+      <button type="button" className='tryagain-btn' >
+        Try again
+      </button>
+    </div>)
+
+    const renderSuccessView = () => (
+        
         <div className='productlist-div'>
             <Filter setCategory={setCategory} search={search} setSearch={setSearch} onClickSearch={onClickSearch}/>
             <div className='text-center'>
@@ -55,6 +94,25 @@ function Home() {
             {!loadMore && <button className='load-more-btn' onClick={onClickLoadMore}>Load More</button>}
             </div>
         </div>
+    )
+
+    const renderResultView = () => {
+
+        switch (state) {
+        case stateConstants.success:
+            return renderSuccessView()
+        case stateConstants.failure:
+            return renderFailureView()
+        case stateConstants.in_progress:
+            return renderLoadingView()
+        default:
+            return null
+        }
+  }
+
+  return (
+    <div className='home-div'>
+    {renderResultView()}
     </div>
   )
 }
