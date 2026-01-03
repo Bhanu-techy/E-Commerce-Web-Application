@@ -18,8 +18,7 @@ function Home() {
     const [category, setCategory] = useState("")
     const [search, setSearch] = useState("")
 
-    useEffect(()=>{
-        const getDetails = async () => {
+    const getDetails = async () => {
             const response = await fetch("https://fakestoreapi.com/products")
             const details = await response.json()
             const someData=details.slice(3,13)
@@ -28,16 +27,20 @@ function Home() {
                 setState(stateConstants.success)
             }else{
                 setState(stateConstants.failure)
-            }
-        }
+            }}
+
+    useEffect(()=>{
         getDetails()
     },[])
 
+
     const onClickLoadMore = async ()=>{
+        setState(stateConstants.in_progress)
         const response = await fetch("https://fakestoreapi.com/products")
             const fullData = await response.json()
             if (response.ok){
                 setData(fullData)
+                setState(stateConstants.success)
             }
             setLoadMore(true)
     }
@@ -72,7 +75,7 @@ function Home() {
         className="failure-view-img"
       />
       <p>Something went wrong. Please try again</p>
-      <button type="button" className='tryagain-btn' >
+      <button type="button" className='tryagain-btn' onClick={getDetails} >
         Try again
       </button>
     </div>)

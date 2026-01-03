@@ -15,7 +15,7 @@ function Header() {
         <h3>Lumina Store</h3>
         <nav className='nav-items'>
             <Link to="/">
-            <p>Shop</p>
+            <p>Home</p>
             </Link>
         </nav>
           <Link to="/cart" className='cart-icon'>

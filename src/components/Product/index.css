@@ -1,6 +1,7 @@
 .image{
     width: 190px;
     height: 210px;
+    
 }
 .products-list{
     display: flex;
@@ -15,7 +16,7 @@
 }
 .product-div{
     width: 230px;
-    height: 380px;
+    height: 385px;
     margin: 10px;
     box-shadow: 4px 4px 6px 6px #fbf5f5;
     padding: 5px;
@@ -23,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 15px;
 }
 .title-div{
     display: flex;

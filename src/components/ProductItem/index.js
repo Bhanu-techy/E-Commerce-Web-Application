@@ -1,15 +1,37 @@
 import {useState, useEffect, useContext} from 'react'
 import { useParams } from 'react-router-dom'
+
+import { Oval } from "react-loader-spinner";
 import CartContext from '../../Context/CartContext'
 import "./index.css"
 
+const stateConstants = {
+  success: 'SUCCESS',
+  failure: 'FAILURE',
+  in_progress: 'LOADING',
+}
+
 function ProductItem() {
 
+    const [state, setState] = useState(stateConstants.in_progress)
     const [details, setDetails] = useState({})
     const [quantity, setQuantity] = useState(1)
     const {id} = useParams()
 
     const {addToCart} = useContext(CartContext)
+
+    const getDetails = async () => {
+            const url =`https://fakestoreapi.com/products/${id}`
+            const response = await fetch(url)
+            const data = await response.json()
+            
+            if (response.ok){
+                setDetails(data)
+                setState(stateConstants.success)
+            }else{
+                setState(stateConstants.failure)
+            }
+        }
 
     useEffect(()=>{
         const getDetails = async () => {
@@ -19,6 +41,9 @@ function ProductItem() {
             
             if (response.ok){
                 setDetails(data)
+                setState(stateConstants.success)
+            }else{
+                setState(stateConstants.failure)
             }
         }
         getDetails()
@@ -40,7 +65,35 @@ function ProductItem() {
 
     const {image, title, description, rating={}, price, category}= details
 
-  return (
+    const renderLoadingView = () => (
+        <div className="profile-loader" data-testid="loader">
+        <Oval
+                visible={true}
+                height="80"
+                width="80"
+                color="#5e84c9ff"
+                ariaLabel="oval-loading"
+                secondaryColor="#92aaedff"
+                strokeWidth={2}
+                strokeWidthSecondary={2}
+            />
+        </div>
+    )
+
+  const renderFailureView = () => (
+    <div className="failure-view">
+      <img
+        src="https://res.cloudinary.com/dsqphsoxb/image/upload/v1751650133/failureView_po4xd8.png"
+        alt="failure view"
+        className="failure-view-img"
+      />
+      <p>Something went wrong. Please try again</p>
+      <button type="button" className='tryagain-btn' onClick={getDetails}>
+        Try again
+      </button>
+    </div>)
+
+    const renderSuccessView = () => (
     <div className='product-item-div'>
         <div className='product-img-div'>
             <img src={image} alt={title} className='product-img'/>
@@ -60,6 +113,26 @@ function ProductItem() {
             <button onClick={onClickAddToCart} className='add-to-cart'>Add To Cart</button>
         </div>
     </div>
+  )
+
+  
+    const renderResultView = () => {
+        switch (state) {
+        case stateConstants.success:
+            return renderSuccessView()
+        case stateConstants.failure:
+            return renderFailureView()
+        case stateConstants.in_progress:
+            return renderLoadingView()
+        default:
+            return null
+        }
+  }
+
+  return (
+    <>
+    {renderResultView()}
+    </>
   )
 }
 

@@ -4,6 +4,7 @@
     align-items: center;
     text-align: left;
     width: 100vw;
+    min-height: 80vh;
 }
 *{
     box-sizing: border-box;
@@ -48,6 +49,8 @@
     }.product-img{
         width: 270px;
         height: 270px;
+    }.add-to-cart{
+        margin-left: 0px;
     }
 }
 
@@ -62,5 +65,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+    }h1{
+        font-size: 28px;
     }
 }
