@@ -3,9 +3,9 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    width: 100vw;
+    width: 97vw;
     min-height: 80vh;
-    
+    padding: 5px;
 }
 .heading{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -39,7 +39,7 @@
 }
 .text{
     text-align: center;
-     padding: 10px;
+    padding: 10px;
 }
 ul{
     padding: 0px;
@@ -97,5 +97,7 @@ ul{
         justify-content: center;
         align-items: center;
         
+    }.text-center{
+        margin-left: 0px;
     }
 }

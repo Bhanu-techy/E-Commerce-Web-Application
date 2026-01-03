@@ -72,6 +72,9 @@ select option:hover{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
+        min-height: 30vh;
+        margin-top: 5px;
         
     }.radio-div{
         width: 80%;
