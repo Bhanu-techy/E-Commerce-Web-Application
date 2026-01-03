@@ -1,11 +1,13 @@
 .cart-container{
-    width: 90vw;
+    width: 95vw;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     padding: 10px;
+    padding-top: 15vh;
+    padding-left: 10px;
 }
 .cart-head{
     display: flex;
@@ -21,10 +23,10 @@ li{
     list-style: none;
 }
 
+
 @media (max-width: 576px) {
     .cart-container{
         width: 100vw;
-        padding: 15px;
         height: 60vh;
     }.cart-heading{
         font-size: 22px;

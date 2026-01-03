@@ -5,6 +5,7 @@
     text-align: left;
     width: 100vw;
     min-height: 80vh;
+    padding-top: 10vh;
 }
 *{
     box-sizing: border-box;

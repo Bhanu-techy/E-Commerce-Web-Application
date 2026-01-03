@@ -10,9 +10,9 @@ function Header() {
   const cartLength = cartItems.length
 
   return (
-    <>
+  
     <div className='header-div'>
-        <h3>Lumina Store</h3>
+        <h3 className='store-name'>Lumina Store</h3>
         <nav className='nav-items'>
             <Link to="/">
             <p>Home</p>
@@ -23,8 +23,8 @@ function Header() {
             {cartLength >0 && <p className='cart-count'>{cartLength}</p>}
           </Link>
     </div>
-    <hr className='hr'/>
-    </>
+   
+  
   )
 }
 
