@@ -1,3 +1,4 @@
+
 .header-div{
     display: flex;
     justify-content: space-between;
@@ -6,7 +7,7 @@
     padding-left: 50px;
     padding-right: 50px;
     position: fixed;
-    background-color: #ffffff;
+    background-color: #f5f7f1;
     min-height: 10vh;
 }
 .nav-items{
@@ -20,7 +21,6 @@
     justify-content: center;
     align-items: center;
     width: 100px;
-    text-decoration: none;
     color: #000;
 }
 .cart-count{
@@ -38,6 +38,19 @@ h3{
 .store-name{
     font-family:cursive;
     color: rgb(240, 108, 59);
+}
+.hr-line{
+    width: 400px;
+    background-color: #000;
+    color: #000;
+}
+.logout{
+    background-color: rgb(59, 59, 238);
+    border: 0px;
+    color: #ffff;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80px;
 }
 
 @media (max-width : 768px) {

@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react'
 import { Oval } from "react-loader-spinner";
+import Header from '../Header'
+import Footer from '../Footer'
 import Product from '../Product'
 import Filter from '../Filter'
 import "./index.css"
@@ -81,7 +83,6 @@ function Home() {
     </div>)
 
     const renderSuccessView = () => (
-        
         <div className='productlist-div'>
             <Filter setCategory={setCategory} search={search} setSearch={setSearch} onClickSearch={onClickSearch}/>
             <div className='text-center'>
@@ -114,9 +115,13 @@ function Home() {
   }
 
   return (
+    <>
+    <Header/>
     <div className='home-div'>
     {renderResultView()}
     </div>
+    <Footer/>
+    </>
   )
 }
 

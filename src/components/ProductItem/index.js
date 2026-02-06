@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 
 import { Oval } from "react-loader-spinner";
 import CartContext from '../../Context/CartContext'
+import Header from '../Header';
+import Footer from '../Footer';
 import "./index.css"
 
 const stateConstants = {
@@ -131,7 +133,9 @@ function ProductItem() {
 
   return (
     <>
+    <Header/>
     {renderResultView()}
+    <Footer/>
     </>
   )
 }

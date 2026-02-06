@@ -2,6 +2,8 @@ import {useContext} from 'react'
 import CartContext from '../../Context/CartContext'
 import EmptyCartView from '../EmptyCartView'
 import CartItem from '../CartItem'
+import Header from '../Header'
+import Footer from '../Footer'
 import './index.css'
 
 function Cart() {
@@ -9,6 +11,8 @@ function Cart() {
   const {cartItems, clearCart} = useContext(CartContext)
 
   return (
+    <>
+    <Header/>
       <div className="cart-container">
         <div>
           {cartItems.length ===0 ?
@@ -30,6 +34,8 @@ function Cart() {
           }
         </div>
      </div>
+     <Footer/>
+     </>
   )
 }
 

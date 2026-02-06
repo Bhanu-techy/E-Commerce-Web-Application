@@ -7,3 +7,9 @@
   width: 95vw;
 
 }
+
+.app{
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
