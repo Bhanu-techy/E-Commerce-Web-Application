@@ -45,6 +45,7 @@ function Home() {
                 setState(stateConstants.success)
             }
             setLoadMore(true)
+            setSearch("")
     }
 
     const filterData = category!==""? data.filter(each=> each.category.includes(category)) : data

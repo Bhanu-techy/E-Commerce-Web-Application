@@ -6,7 +6,6 @@
     width: 97vw;
     min-height: 80vh;
     padding: 5px;
-    padding-top: 10vh;
 }
 .heading{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -95,7 +94,7 @@ ul{
         flex-direction: column;
     }.home-div{
         width: 100%;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         
     }.text-center{

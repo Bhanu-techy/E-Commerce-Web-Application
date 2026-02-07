@@ -37,7 +37,7 @@ function Login() {
     <div className='login-container'>
         <div className='login-div'>
           <form onSubmit={submitForm}>
-            <h3 className='store-name'>Lumina Store</h3>
+            <h3 className='store-name-log'>Lumina Store</h3>
           <div className="input-container">
                   <label htmlFor="username">USERNAME</label>
                   <input

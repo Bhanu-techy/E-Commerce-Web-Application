@@ -22,7 +22,7 @@ function Cart() {
               <h1 className="cart-heading">My Cart</h1>
               <button
                 type="button"
-                className="remove-btn"
+                className="remove-all-btn"
                 data-testid="remove"
                 onClick={clearCart}
               >Remove All</button>

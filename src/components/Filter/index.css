@@ -6,7 +6,6 @@
     justify-content: start;
     align-items: center;
     position: fixed;
-    margin-top: 30px;
 }
 .radio-div{
     padding: 10px;
@@ -74,7 +73,7 @@ select option:hover{
         align-items: center;
         position: relative;
         min-height: 30vh;
-        margin-top: 5px;
+        margin-top: 0px;
         
     }.radio-div{
         width: 80%;

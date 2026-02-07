@@ -2,7 +2,6 @@
 
 ***Ecomerce Web Application***
 
-
 ## Overview
 
 This project is a React-based E-Commerce frontend application designed to simulate a real-world online shopping experience. Users can browse products, view detailed product information, choose quantities, and add items to a shopping cart. The application emphasizes clean UI, smooth navigation, and efficient state management.
@@ -112,6 +111,55 @@ src/
 └── index.js
 
 ```
+
+### User Credentials
+
+<details>
+<summary>Click to view user credentials</summary>
+
+<br/>
+
+**You can use any one of the following credentials**
+
+```text
+  username: aakash
+  password: sky@007
+```
+
+```text
+  username: agastya
+  password: myth#789
+```
+
+```text
+  username: advika
+  password: world@5
+```
+
+```text
+  username: binita
+  password: modest*6
+```
+
+```text
+  username: chetan
+  password: vigor$life
+```
+
+```text
+  username: kapil
+  password: moon$008
+```
+
+```text
+ username: rahul
+ password: rahul@2021
+```
+
+<br/>
+</details>
+
+
 
 ## Core Concepts Implemented
 

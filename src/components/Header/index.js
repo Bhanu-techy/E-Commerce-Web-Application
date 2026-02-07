@@ -28,7 +28,7 @@ function Header() {
           <Link to="/cart" className='cart-icon'>
             Cart
             <FiShoppingCart size={20}/>
-            {cartLength >0 && <p className='cart-count'>{cartLength}</p>}
+            {cartLength >0 && <span className='cart-count'>{cartLength}</span>}
           </Link>
           <button className='logout' onClick={onClickLogout}>
             Logout
