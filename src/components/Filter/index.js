@@ -12,8 +12,8 @@ function Filter({setCategory, search, setSearch, onClickSearch}) {
         </div>
         <div>
         <h2><span><IoFilterSharp/> </span>Filters</h2>
-         <select defaultValue="" onChange={(e)=>setCategory(e.target.value)}>
-                <option value="none" selected disabled>Features</option>
+         <select onChange={(e)=>setCategory(e.target.value)}>
+                <option value="" selected disabled>Features</option>
                 <option value="men's clothing">Men's Clothing</option>
                 <option value="women's clothing">Women's Clothing</option>
                 <option value="jewelery">Jewelery</option>
